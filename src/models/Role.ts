@@ -1,30 +1,32 @@
-import { AutoIncrement, Column, ForeignKey, Model, PrimaryKey, Table } from 'sequelize-typescript';
-import { Permissions } from '../constants';
+import { Column, HasMany, Model, Table } from 'sequelize-typescript';
 import { User } from './User';
-import { DataType } from 'sequelize';
+import { STRING, UUID, UUIDV4 } from 'sequelize';
+import { Permission } from './Permission';
 
 @Table
 export class Role extends Model{
-  @AutoIncrement
-  @PrimaryKey
-  @Column
-  // @ts-ignore
-  id: DataType.INTEGER;
+  @Column({
+    type: UUID,
+    defaultValue: UUIDV4,
+    primaryKey: true,
+    allowNull: false,
+    unique: true
+  })
+  uuid!: string;
 
-  @Column
-  // @ts-ignore
-  uuid: DataType.UUID;
+  @Column({
+    type: STRING,
+    allowNull: false
+  })
+  name!: string;
 
-  @Column
+  @HasMany(() => User)
   // @ts-ignore
-  name: DataType.STRING;
+  users: User[];
 
-  @Column
+  @HasMany(() => Permission)
   // @ts-ignore
-  permissions: Permissions[];
+  permissions: Permission[];
 
-  // @ForeignKey(() => User)
-  @Column
-  // @ts-ignore
-  usersId: number[];
+
 }
