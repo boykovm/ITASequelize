@@ -1,34 +1,37 @@
 import {
-  AllowNull,
-  AutoIncrement,
+  BelongsTo,
   Column,
-  CreatedAt,
   ForeignKey,
   IsEmail,
   Model,
   Table,
-  UpdatedAt,
 } from 'sequelize-typescript';
+import { STRING, UUID, UUIDV4 } from 'sequelize';
 import { Role } from './Role';
-import { DATE, STRING, UUID, UUIDV4 } from 'sequelize';
+
+interface UserI {
+  // id: string;
+  name: string;
+  email: string;
+  role?: Role;
+  roleId?: number;
+}
 
 @Table
-export class User extends Model{
-  @Column({
-    type: UUID,
-    defaultValue: UUIDV4,
-    primaryKey: true,
-    allowNull: false,
-    unique: true
-  })
-  // @ts-ignore
-  uuid: string;
+export class User extends Model<UserI>{
+  // @Column({
+  //   type: UUID,
+  //   defaultValue: UUIDV4,
+  //   primaryKey: true,
+  //   allowNull: false,
+  //   unique: true
+  // })
+  // id: string;
 
   @Column({
     type: STRING,
     allowNull: false
   })
-  // @ts-ignore
   name: string;
 
   @IsEmail
@@ -36,10 +39,16 @@ export class User extends Model{
     type: STRING,
     allowNull: false
   })
-  // @ts-ignore
   email: string;
 
   @ForeignKey(() => Role)
+  @Column({
+    // type: UUID,
+    allowNull: true
+  })
+  roleId?: number;
+
+  @BelongsTo(() => Role)
   // @ts-ignore
-  role: Role[];
+  role?: Role;
 }

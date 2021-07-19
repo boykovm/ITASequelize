@@ -1,32 +1,35 @@
-import { Column, HasMany, Model, Table } from 'sequelize-typescript';
+import { BelongsToMany, Column, DataType, HasMany, Model, Table } from 'sequelize-typescript';
 import { User } from './User';
 import { STRING, UUID, UUIDV4 } from 'sequelize';
 import { Permission } from './Permission';
+import { RolePermission } from './RolePermission';
+
+interface RoleI {
+  // id: string;
+  name: string;
+  // permissions: Permission;
+}
 
 @Table
-export class Role extends Model{
-  @Column({
-    type: UUID,
-    defaultValue: UUIDV4,
-    primaryKey: true,
-    allowNull: false,
-    unique: true
-  })
-  uuid!: string;
+export class Role extends Model<RoleI>{
+  // @Column({
+  //   type: UUID,
+  //   defaultValue: UUIDV4,
+  //   primaryKey: true,
+  //   allowNull: false,
+  //   unique: true
+  // })
+  // id: string;
 
   @Column({
     type: STRING,
-    allowNull: false
+    allowNull: false,
   })
-  name!: string;
+  name: string;
 
   @HasMany(() => User)
-  // @ts-ignore
   users: User[];
 
-  @HasMany(() => Permission)
-  // @ts-ignore
+  @BelongsToMany(() => Permission, () => RolePermission)
   permissions: Permission[];
-
-
 }

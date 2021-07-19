@@ -1,7 +1,8 @@
-import { Column, ForeignKey, Model, Table } from 'sequelize-typescript';
+import { BelongsToMany, Column, ForeignKey, Model, Table } from 'sequelize-typescript';
 import { STRING } from 'sequelize';
 import { Permissions } from '../constants';
 import { Role } from './Role';
+import { RolePermission } from './RolePermission';
 
 interface PermissionAttributesI {
   type: Permissions;
@@ -13,10 +14,15 @@ export class Permission extends Model<PermissionAttributesI>{
     type: STRING,
     allowNull: false
   })
-  // @ts-ignore
-  type: string;
+  permission: Permissions;
+
+  @BelongsToMany(() => Role, () => RolePermission)
+  role: Role;
+  // @Column({
+  //   type: STRING,
+  // })
+  // roleId: string;
 
   @ForeignKey(() => Role)
-  // @ts-ignore
   roles: Role[];
 }

@@ -2,6 +2,7 @@ import { Sequelize } from 'sequelize-typescript';
 import { User } from './User';
 import { Role } from './Role';
 import { Permission } from './Permission';
+import { RolePermission } from './RolePermission';
 
 export const sequelize = new Sequelize({
   database: 'some_db',
@@ -14,5 +15,6 @@ export const sequelize = new Sequelize({
     User,
     Role,
     Permission,
+    RolePermission
   ]
 });
