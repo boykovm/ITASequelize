@@ -19,14 +19,14 @@ interface UserI {
 
 @Table
 export class User extends Model<UserI>{
-  // @Column({
-  //   type: UUID,
-  //   defaultValue: UUIDV4,
-  //   primaryKey: true,
-  //   allowNull: false,
-  //   unique: true
-  // })
-  // id: string;
+  @Column({
+    type: UUID,
+    defaultValue: UUIDV4,
+    primaryKey: true,
+    allowNull: false,
+    unique: true
+  })
+  uuid: string;
 
   @Column({
     type: STRING,
@@ -43,10 +43,10 @@ export class User extends Model<UserI>{
 
   @ForeignKey(() => Role)
   @Column({
-    // type: UUID,
+    type: UUID,
     allowNull: true
   })
-  roleId?: number;
+  roleId?: string;
 
   @BelongsTo(() => Role)
   // @ts-ignore

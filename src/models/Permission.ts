@@ -1,5 +1,5 @@
 import { BelongsToMany, Column, ForeignKey, Model, Table } from 'sequelize-typescript';
-import { STRING } from 'sequelize';
+import { STRING, UUID, UUIDV4 } from 'sequelize';
 import { Permissions } from '../constants';
 import { Role } from './Role';
 import { RolePermission } from './RolePermission';
@@ -10,6 +10,15 @@ interface PermissionAttributesI {
 
 @Table
 export class Permission extends Model<PermissionAttributesI>{
+  @Column({
+    type: UUID,
+    defaultValue: UUIDV4,
+    primaryKey: true,
+    allowNull: false,
+    unique: true
+  })
+  uuid: string;
+
   @Column({
     type: STRING,
     allowNull: false

@@ -1,4 +1,4 @@
-import { BelongsToMany, Column, DataType, HasMany, Model, Table } from 'sequelize-typescript';
+import { BelongsToMany, Column, DataType, HasMany, Model, PrimaryKey, Table } from 'sequelize-typescript';
 import { User } from './User';
 import { STRING, UUID, UUIDV4 } from 'sequelize';
 import { Permission } from './Permission';
@@ -12,14 +12,14 @@ interface RoleI {
 
 @Table
 export class Role extends Model<RoleI>{
-  // @Column({
-  //   type: UUID,
-  //   defaultValue: UUIDV4,
-  //   primaryKey: true,
-  //   allowNull: false,
-  //   unique: true
-  // })
-  // id: string;
+  @PrimaryKey
+  @Column({
+    type: UUID,
+    defaultValue: UUIDV4,
+    allowNull: false,
+    unique: true
+  })
+  uuid: string;
 
   @Column({
     type: STRING,

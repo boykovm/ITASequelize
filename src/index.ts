@@ -79,7 +79,7 @@ app.listen(Constants.PORT, Constants.HOSTNAME, () => {
 
           try {
             await sequelize.sync(
-              // {force: true}
+              {force: true}
             );
             await start();
           } catch (e) {

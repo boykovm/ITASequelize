@@ -16,5 +16,4 @@ export class RolePermission extends Model{
     type: STRING
   })
   public permissionId: string;
-
 }
