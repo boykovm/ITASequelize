@@ -3,14 +3,14 @@ import { User } from './User';
 import { Role } from './Role';
 import { Permission } from './Permission';
 import { RolePermission } from './RolePermission';
+import { DataBase } from '../constants';
 
 export const sequelize = new Sequelize({
-  database: 'some_db',
-  dialect: 'mysql',
-  username: 'root',
-  password: 'password',
-  // storage: ':memory:',
-  host: 'localhost',
+  database: DataBase.DATABASE,
+  dialect: DataBase.DIALECT,
+  username: DataBase.USERNAME,
+  password: DataBase.PASSWORD,
+  host: DataBase.HOST,
   models: [
     User,
     Role,

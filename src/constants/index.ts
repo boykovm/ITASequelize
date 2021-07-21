@@ -10,3 +10,11 @@ export enum Permissions {
   UPDATE = 'update',
   DELETE = 'delete',
 }
+
+export enum DataBase {
+  DATABASE = 'some_db',
+  DIALECT = 'mysql',
+  USERNAME = 'root',
+  PASSWORD = 'password',
+  HOST = 'localhost',
+}

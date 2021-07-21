@@ -10,7 +10,7 @@ import { STRING, UUID, UUIDV4 } from 'sequelize';
 import { Role } from './Role';
 
 interface UserI {
-  // id: string;
+  uuid: string;
   name: string;
   email: string;
   role?: Role;
@@ -49,6 +49,5 @@ export class User extends Model<UserI>{
   roleId?: string;
 
   @BelongsTo(() => Role)
-  // @ts-ignore
   role?: Role;
 }

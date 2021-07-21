@@ -27,10 +27,6 @@ export class Permission extends Model<PermissionAttributesI>{
 
   @BelongsToMany(() => Role, () => RolePermission)
   role: Role;
-  // @Column({
-  //   type: STRING,
-  // })
-  // roleId: string;
 
   @ForeignKey(() => Role)
   roles: Role[];

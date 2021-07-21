@@ -5,9 +5,8 @@ import { Permission } from './Permission';
 import { RolePermission } from './RolePermission';
 
 interface RoleI {
-  // id: string;
+  uuid: string;
   name: string;
-  // permissions: Permission;
 }
 
 @Table
