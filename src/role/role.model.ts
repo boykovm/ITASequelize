@@ -1,8 +1,8 @@
 import { BelongsToMany, Column, DataType, HasMany, Model, PrimaryKey, Table } from 'sequelize-typescript';
-import { User } from './User';
+import { User } from '../user/user.model';
 import { STRING, UUID, UUIDV4 } from 'sequelize';
-import { Permission } from './Permission';
-import { RolePermission } from './RolePermission';
+import { Permission } from '../permission/permission.model';
+import { RolePermission } from '../shared/role-permission.model';
 
 interface RoleI {
   uuid: string;

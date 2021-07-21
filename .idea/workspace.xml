@@ -2,24 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ea05d68-0831-4814-a97c-3bd4ae8bae2c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqlize.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/constants.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/user.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Permission.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Permission.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Role.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Role.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/RolePermission.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/RolePermission.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/User.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/sequelize.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/homeRouter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/homeRouter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/userI.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Permission.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/permission/permission.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Role.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/role.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/RolePermission.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/role-permission.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/user.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/sequelize.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/sequelize.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/homeRouter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/home.router.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,6 +51,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="ts.external.directory.path" value="C:\Users\Ледокол\Desktop\sqlize\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ледокол\Desktop\sqlize\src\shared" />
+      <recent name="C:\Users\Ледокол\Desktop\sqlize\src" />
+      <recent name="C:\Users\Ледокол\Desktop\sqlize\src\role" />
+      <recent name="C:\Users\Ледокол\Desktop\sqlize\src\permission" />
+      <recent name="C:\Users\Ледокол\Desktop\sqlize\src\user" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.realtime">
     <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/dist/index.js" working-dir="$PROJECT_DIR$/dist">
@@ -122,7 +123,7 @@
       <workItem from="1626713909951" duration="1473000" />
       <workItem from="1626723032396" duration="193000" />
       <workItem from="1626775358617" duration="1913000" />
-      <workItem from="1626858364170" duration="3219000" />
+      <workItem from="1626858364170" duration="4335000" />
     </task>
     <servers />
   </component>

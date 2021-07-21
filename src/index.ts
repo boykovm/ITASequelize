@@ -1,13 +1,13 @@
 import express, { Express, Request, Response } from 'express';
 
-import routes from './routes';
+import routes from './shared/index.routes';
 import bodyParser from 'body-parser';
-import { Constants, Permissions } from './constants';
-import { sequelize } from './models/sequelize';
-import { User } from './models/User';
-import { Role } from './models/Role';
+import { Constants, Permissions } from './shared/constants';
+import { sequelize } from './shared/sequelize';
+import { User } from './user/user.model';
+import { Role } from './role/role.model';
 import { read } from 'fs';
-import { Permission } from './models/Permission';
+import { Permission } from './permission/permission.model';
 
 const app: Express = express();
 

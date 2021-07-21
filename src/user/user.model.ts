@@ -7,7 +7,7 @@ import {
   Table,
 } from 'sequelize-typescript';
 import { STRING, UUID, UUIDV4 } from 'sequelize';
-import { Role } from './Role';
+import { Role } from '../role/role.model';
 
 interface UserI {
   uuid: string;

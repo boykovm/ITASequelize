@@ -1,8 +1,8 @@
 import { BelongsToMany, Column, ForeignKey, Model, Table } from 'sequelize-typescript';
 import { STRING, UUID, UUIDV4 } from 'sequelize';
-import { Permissions } from '../constants';
-import { Role } from './Role';
-import { RolePermission } from './RolePermission';
+import { Permissions } from '../shared/constants';
+import { Role } from '../role/role.model';
+import { RolePermission } from '../shared/role-permission.model';
 
 interface PermissionAttributesI {
   type: Permissions;

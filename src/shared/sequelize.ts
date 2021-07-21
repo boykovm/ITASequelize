@@ -1,9 +1,9 @@
 import { Sequelize } from 'sequelize-typescript';
-import { User } from './User';
-import { Role } from './Role';
-import { Permission } from './Permission';
-import { RolePermission } from './RolePermission';
-import { DataBase } from '../constants';
+import { User } from '../user/user.model';
+import { Role } from '../role/role.model';
+import { Permission } from '../permission/permission.model';
+import { RolePermission } from './role-permission.model';
+import { DataBase } from './constants';
 
 export const sequelize = new Sequelize({
   database: DataBase.DATABASE,
