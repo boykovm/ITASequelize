@@ -8,14 +8,7 @@ import {
 } from 'sequelize-typescript';
 import { STRING, UUID, UUIDV4 } from 'sequelize';
 import { Role } from '../role/role.model';
-
-interface UserI {
-  uuid: string;
-  name: string;
-  email: string;
-  role?: Role;
-  roleId?: number;
-}
+import { UserI } from './user.interface';
 
 @Table
 export class User extends Model<UserI>{

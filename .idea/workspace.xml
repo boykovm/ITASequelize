@@ -2,17 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ea05d68-0831-4814-a97c-3bd4ae8bae2c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/permission/permission.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/permission/permission.routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/role/role.routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/user/user.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/user/user.routes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/constants.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/userI.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Permission.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/permission/permission.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Role.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/role.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/RolePermission.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/role-permission.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/user.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/sequelize.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/sequelize.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/homeRouter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/home.router.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/permission/permission.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/permission/permission.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/home.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/home.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/index.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/index.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/user.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/user.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/userI.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,12 +24,21 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="tsconfig.json" />
         <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1vIqNpjAiuU5Ifbnf6EYESyQDNJ" />
   <component name="ProjectViewState">
@@ -38,8 +49,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="14.17.2" />
-    <property name="javascript.nodejs.core.library.typings.version" value="14.17.2" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.15.3" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.17.5" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -49,16 +60,16 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
-    <property name="ts.external.directory.path" value="C:\Users\Ледокол\Desktop\sqlize\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Users\Оксана\Desktop\sqlize\ITASequelize\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Оксана\Desktop\sqlize\ITASequelize\src\shared" />
       <recent name="C:\Users\Ледокол\Desktop\sqlize\src\shared" />
       <recent name="C:\Users\Ледокол\Desktop\sqlize\src" />
       <recent name="C:\Users\Ледокол\Desktop\sqlize\src\role" />
       <recent name="C:\Users\Ледокол\Desktop\sqlize\src\permission" />
-      <recent name="C:\Users\Ледокол\Desktop\sqlize\src\user" />
     </key>
   </component>
   <component name="RunManager" selected="npm.realtime">
@@ -124,6 +135,7 @@
       <workItem from="1626723032396" duration="193000" />
       <workItem from="1626775358617" duration="1913000" />
       <workItem from="1626858364170" duration="4335000" />
+      <workItem from="1626888310632" duration="12682000" />
     </task>
     <servers />
   </component>

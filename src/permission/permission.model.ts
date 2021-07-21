@@ -3,13 +3,10 @@ import { STRING, UUID, UUIDV4 } from 'sequelize';
 import { Permissions } from '../shared/constants';
 import { Role } from '../role/role.model';
 import { RolePermission } from '../shared/role-permission.model';
-
-interface PermissionAttributesI {
-  type: Permissions;
-}
+import { PermissionI } from './permission.interface';
 
 @Table
-export class Permission extends Model<PermissionAttributesI>{
+export class Permission extends Model<PermissionI>{
   @Column({
     type: UUID,
     defaultValue: UUIDV4,

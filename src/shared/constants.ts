@@ -14,7 +14,7 @@ export enum Permissions {
 export enum DataBase {
   DATABASE = 'some_db',
   DIALECT = 'mysql',
-  USERNAME = 'root',
-  PASSWORD = 'password',
+  USERNAME = 'ita',
+  PASSWORD = 'ita',
   HOST = 'localhost',
 }
