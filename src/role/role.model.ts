@@ -5,12 +5,12 @@ import { Permission } from '../permission/permission.model';
 import { RolePermission } from '../shared/role-permission.model';
 
 interface RoleI {
-  uuid: string;
+  // uuid: string;
   name: string;
 }
 
 @Table
-export class Role extends Model<RoleI>{
+export class Role extends Model{
   @PrimaryKey
   @Column({
     type: UUID,

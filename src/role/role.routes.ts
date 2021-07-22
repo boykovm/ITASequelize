@@ -15,27 +15,27 @@ roleRoutes.get('/all', async (req: Request, res: Response) => {
 });
 
 roleRoutes.post('/', async (req: Request, res: Response) => {
-  // const permissions = req.body.permissions.map((permission: string) => {
-  //   return {permission};
-  // });
-  // console.log(permissions);
   Role.create(
     {
-      name: req.body.name,
-  // @ts-ignore
-      permissions: req.body.permissions
-    },
-    {
-      include: Permission
+      name: req.body.name
     })
-    .then((data) => {
-      // res.sendStatus(200);
-      res.send(data);
+    .then((role: Role) => {
+      req.body.permissions.forEach(async (permission: string) => {
+      // @ts-ignore
+       await role.addPermission(permission);
+      });
+      res.sendStatus(200);
     })
     .catch((e: Error) => {
       res.sendStatus(500);
       console.error(e);
     });
+});
+
+roleRoutes.get('/with-permission', async (req: Request, res: Response) => {
+  const roles = await Role.findAll({include: Permission});
+  res.send(roles);
+  // res.sendStatus(200);
 });
 
 export default roleRoutes;

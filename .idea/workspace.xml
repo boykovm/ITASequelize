@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ea05d68-0831-4814-a97c-3bd4ae8bae2c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/permission/permission.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/permission/permission.routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/role/role.routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/user/user.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/user/user.routes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/permission/permission.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/permission/permission.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/home.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/home.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/index.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/index.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/user/user.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/user.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/user/userI.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/role.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/role.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/role.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/role.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/user.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/user.routes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +126,7 @@
       <workItem from="1626723032396" duration="193000" />
       <workItem from="1626775358617" duration="1913000" />
       <workItem from="1626858364170" duration="4335000" />
-      <workItem from="1626888310632" duration="12682000" />
+      <workItem from="1626888310632" duration="17406000" />
     </task>
     <servers />
   </component>

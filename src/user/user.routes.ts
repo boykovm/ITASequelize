@@ -75,4 +75,8 @@ userRoutes.delete('/:id', async (req: Request, res: Response) => {
     });
 });
 
+userRoutes.patch('/add-role', async (req: Request, res: Response) => {
+  res.send('ok');
+});
+
 export default userRoutes;
