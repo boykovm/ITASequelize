@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ea05d68-0831-4814-a97c-3bd4ae8bae2c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/permission/permission.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/permission/permission.services.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/role/role.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/role/role.services.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/user/user.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/user/user.services.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/permission/permission.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/permission/permission.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/role/role.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/role.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/user/user.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/user.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/permission/permission.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/permission/permission.controller.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

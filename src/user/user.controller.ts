@@ -6,7 +6,6 @@ import { addRole, deleteUser, getUserById, getUsers, newUser, pathUser } from '.
 export const getAll = async (req: Request, res: Response) => {
   getUsers()
     .then((users: User[]) => {
-      console.log()
       res.send(users);
     })
     .catch((e: Error) => {
@@ -18,6 +17,9 @@ export const getAll = async (req: Request, res: Response) => {
 export const getUser = async (req: Request, res: Response) => {
   getUserById(req)
     .then((user: User | null) => {
+      if (!user) {
+        return res.sendStatus(404);
+      }
       res.send(user);
     })
     .catch((e: Error) => {

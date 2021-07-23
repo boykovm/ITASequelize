@@ -22,8 +22,11 @@ export const getAllPermissions = async (req: Request, res: Response) => {
 
 export const getPermissionById = async (req: Request, res: Response) => {
   getPermission(req)
-    .then((data) => {
-      res.send(data);
+    .then((permission: Permission | null) => {
+      if (!permission) {
+        return res.sendStatus(404);
+      }
+      res.send(permission);
     })
     .catch((e: Error) => {
       console.error(e);
