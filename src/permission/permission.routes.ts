@@ -1,78 +1,18 @@
-import express, { Request, Router, Response } from 'express';
-import { Permission } from './permission.model';
-import { PermissionI } from './permission.interface';
+import express, { Router } from 'express';
+import {
+  createPermission,
+  deletePermission,
+  getAllPermissions,
+  getPermissionById,
+  updatePermission
+} from './permission.controller';
 
 const permissionRoutes: Router = express.Router();
 
-permissionRoutes.get('/all', async (req: Request, res: Response) => {
-  Permission.findAll()
-    .then((permissions: PermissionI[]) => {
-      res.send(permissions);
-    })
-    .catch((e: Error) => {
-      console.error(e);
-      res.sendStatus(500);
-    });
-});
-
-permissionRoutes.get('/:id', async (req: Request, res: Response) => {
-  Permission.findByPk(req.params.id)
-    .then((data) => {
-      res.send(data);
-    })
-    .catch((e: Error) => {
-      console.error(e);
-      res.sendStatus(500);
-    });
-});
-
-permissionRoutes.post('/', async (req: Request, res: Response) => {
-  Permission.create(
-    {
-      ...req.body
-    }
-  )
-    .then(() => {
-      res.sendStatus(200);
-    })
-    .catch((e: Error) => {
-      res.sendStatus(500);
-      console.error(e);
-    });
-});
-
-permissionRoutes.patch('/:id', async (req: Request, res: Response) => {
-  Permission.update(
-    {
-    ...req.body
-  },
-    {
-    where: {
-      uuid: req.params.id
-    }
-  })
-    .then(() => {
-      res.sendStatus(200);
-    })
-    .catch((e: Error) => {
-      res.sendStatus(500);
-      console.error(e);
-    });
-});
-
-permissionRoutes.delete('/:id', async (req: Request, res: Response) => {
-  Permission.destroy({
-    where: {
-      uuid: req.params.id
-    }
-  })
-    .then(() => {
-      res.sendStatus(200);
-    })
-    .catch((e: Error) => {
-      res.sendStatus(500);
-      console.error(e);
-    });
-});
+permissionRoutes.get('/all', getAllPermissions);
+permissionRoutes.get('/:id', getPermissionById);
+permissionRoutes.post('/', createPermission);
+permissionRoutes.patch('/:id', updatePermission);
+permissionRoutes.delete('/:id', deletePermission);
 
 export default permissionRoutes;
