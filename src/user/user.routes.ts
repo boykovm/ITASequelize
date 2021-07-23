@@ -75,8 +75,27 @@ userRoutes.delete('/:id', async (req: Request, res: Response) => {
     });
 });
 
-userRoutes.patch('/add-role', async (req: Request, res: Response) => {
-  res.send('ok');
+userRoutes.patch('/:id/add-role', async (req: Request, res: Response) => {
+  // const user = User.findByPk(req.params.id);
+  // console.log(req.params.id);
+  // @ts-ignore
+  // user.addRoleId(req.body.roleId);
+  User.update(
+    {
+      roleId: req.body.roleId
+    },
+    {
+      where: {
+        uuid: req.params.id
+      }
+    }
+  )
+    .then(() => {
+      res.sendStatus(200);
+    })
+    .catch((e: Error) => {
+      console.error(e);
+    });
 });
 
 export default userRoutes;
