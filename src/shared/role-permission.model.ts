@@ -1,7 +1,8 @@
 import { Column, ForeignKey, Model, Table } from 'sequelize-typescript';
+import { STRING } from 'sequelize';
+
 import { Role } from '../role/role.model';
 import { Permission } from '../permission/permission.model';
-import { STRING } from 'sequelize';
 
 @Table
 export class RolePermission extends Model{

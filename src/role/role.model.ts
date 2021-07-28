@@ -5,7 +5,6 @@ import { Permission } from '../permission/permission.model';
 import { RolePermission } from '../shared/role-permission.model';
 
 interface RoleI {
-  // uuid: string;
   name: string;
 }
 

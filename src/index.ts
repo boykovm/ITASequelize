@@ -1,13 +1,9 @@
 import express, { Express, Request, Response } from 'express';
-
-import routes from './shared/index.routes';
 import bodyParser from 'body-parser';
+
+import routes from './index.routes';
 import { Constants, Permissions } from './shared/constants';
 import { sequelize } from './shared/sequelize';
-import { User } from './user/user.model';
-import { Role } from './role/role.model';
-import { read } from 'fs';
-import { Permission } from './permission/permission.model';
 
 const app: Express = express();
 
@@ -19,40 +15,6 @@ app.route('*')
     res.sendStatus(404);
   });
 
-async function start() {
-    await User.create({
-    name: 'name',
-    email: 'dfd@gmail.com',
-  // @ts-ignore
-    role: {name: 'read'}
-    },
-    {include: [
-      Role
-    ]}
-  );
-
-  await Role.create({
-    name: 'admin',
-  // @ts-ignore
-    permissions: [
-      {
-        permission: Permissions.READ
-      },{
-        permission: Permissions.CREATE
-      },{
-        permission: Permissions.UPDATE
-      },{
-        permission: Permissions.DELETE
-      },
-    ],
-    },
-  {
-    include: [
-      Permission
-    ]}
-  );
-}
-
 app.listen(Constants.PORT, Constants.HOSTNAME, () => {
     console.log(`Server was running at http://${Constants.HOSTNAME}:${Constants.PORT}/`);
 
@@ -63,9 +25,7 @@ app.listen(Constants.PORT, Constants.HOSTNAME, () => {
 
           try {
             await sequelize.sync(
-              // {force: true}
             );
-            // await start();
           } catch (e) {
             console.error(e);
           }

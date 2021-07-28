@@ -1,4 +1,5 @@
 import { Sequelize } from 'sequelize-typescript';
+
 import { User } from '../user/user.model';
 import { Role } from '../role/role.model';
 import { Permission } from '../permission/permission.model';
