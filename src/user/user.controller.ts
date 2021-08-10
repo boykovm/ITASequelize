@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 
 import { User } from './user.model';
 import { addRole, deleteUser, getUserById, getUsers, newUser, pathUser } from './user.services';
+import { Role } from '../role/role.model';
 
 export const getAll = async (req: Request, res: Response) => {
   try {
@@ -60,6 +61,21 @@ export const addUsersRole = async (req: Request, res: Response) => {
   try {
     await addRole(req);
     res.sendStatus(200);
+  } catch (e) {
+    res.sendStatus(500);
+    console.error(e);
+  }
+};
+
+export const userRole = async (req: Request, res: Response) => {
+  try {
+    const user = await User.findByPk(req.params.id);
+    if (!user?.roleId) {
+      res.status(200);
+      return res.send(null);
+    }
+    const role = await Role.findByPk(user.roleId);
+    res.send(role);
   } catch (e) {
     res.sendStatus(500);
     console.error(e);
